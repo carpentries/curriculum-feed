@@ -22,7 +22,7 @@ get_all_lesson_data <- function(key, namespace) {
   get_env_var("AIRTABLE_API_KEY")
   airtable_base <- get_env_var("AIRTABLE_LESSONS_KEY")
   repos <- airtabler::airtable(base = airtable_base, table = key)
-  repos$Repositories$select_all()
+  repos[[key]]$select_all()
 }
 
 repo_data <- store_lesson_data()$get("Repositories")
