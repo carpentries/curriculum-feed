@@ -10,7 +10,8 @@ get_stage("install") %>%
 get_stage("deploy") %>%
   add_code_step(source("get_curriculum_data.R")) %>%
   add_code_step(generate_curricula()) %>%
-  add_code_step(generate_lesson_feed())
+  add_code_step(generate_lesson_feed()) %>%
+  add_code_step(file.copy("README.md", "_data/index.md"))
 
 
 if (Sys.getenv("id_rsa") != "") {
