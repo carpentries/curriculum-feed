@@ -25,7 +25,7 @@ get_all_lesson_data <- function(key, namespace) {
   repos$Repositories$select_all()
 }
 
-repo_data <- store_lesson_data(path)$get("Repositories")
+repo_data <- store_lesson_data()$get("Repositories")
 
 
 generate_curricula <- function(path = "_data/carpentries_curricula.json", ...) {
