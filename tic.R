@@ -2,7 +2,10 @@ get_stage("before_install") %>%
   add_code_step(update.packages(ask = FALSE))
 
 get_stage("install") %>%
-  add_code_step(install.packages(requirements::req_file("get_curriculum_data.R")))
+  add_code_step(remotes::install_github("bergant/airtabler")) %>%
+  add_code_step(install.packages(
+    requirements::req_file("get_curriculum_data.R"))
+    )
 
 get_stage("deploy") %>%
   add_code_step(source("get_curriculum_data.R")) %>%
