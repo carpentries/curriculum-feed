@@ -32,9 +32,10 @@ generate_curricula <- function(path = "_data/carpentries_curricula.json", ...) {
 
   check_dir(path)
 
-  res <- repo_data[!is.na(repo_data$curriculum) |
-                     repo_data$curriculum != "NA" |
-                      as.logical(repo_data$is_official), "curriculum"]
+  repo_data$is_official <- as.logical(repo_data$is_official)
+  res <- repo_data[repo_data$curriculum != "NA" |
+                     (repo_data$is_official & !is.na(repo_data$is_official)),
+                   "curriculum"]
 
   jsonlite::write_json(
     list(curricula = unique(res)),
@@ -49,7 +50,7 @@ generate_lesson_feed <- function(path = "_data/carpentries_lessons.json", ...) {
   ## TODO: add lesson title
   res <- repo_data[!is.na(repo_data$curriculum)  |
                      repo_data$curriculum != "NA",
-                   c("repository", "curriculum", "life_cycle",
+                   c("repository", "curriculum", "life_cycle", "language",
                      "URL")]
 
   jsonlite::write_json(
