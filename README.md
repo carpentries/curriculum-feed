@@ -6,4 +6,4 @@ The data is stored in Airtable. The script is run on Travis daily through a CRON
 The data is provided at:
 
 - The list of curricula: <https://carpentries.github.io/curriculum-feed/carpentries_curricula.json>
-- The full list of our lessons: <https://carpentries.github.io/curriculum-feed/carpentries_lesson.json>
+- The full list of our lessons: <https://carpentries.github.io/curriculum-feed/carpentries_lessons.json>
