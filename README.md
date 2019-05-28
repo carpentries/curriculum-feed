@@ -1,7 +1,7 @@
 # Carpentries Curriculum Feed
 
 Provide data in JSON format about The Carpentries lessons.
-The data is stored in Airtable. The script is run on Travis daily through a CRON job. To make is run you need the Airtable API key (set as `AIRTABLE_API_KEY` environment variable) and the the key for the airtable base (set as `AIRTABLE_LESSONS_KEY`). Both are set up as secure variables in Travis.
+The data is stored in Airtable. The script is run on Travis daily through a CRON job. To make is run you need the Airtable API key (set as `AIRTABLE_API_KEY` environment variable) and the key for the airtable base (set as `AIRTABLE_LESSONS_KEY`). Both are set up as secure variables in Travis.
 
 The data is provided at:
 
