@@ -2,7 +2,7 @@
 
 :warning: :warning: :warning:
 
-**While these feeds are still valid, you may want to use <https://feeds.carpentries.org/lessons.json> instead.**
+**As of 2021-09-22, these feeds are deprecated, please use <https://feeds.carpentries.org/lessons.json> instead.**
 
 :warning: :warning: :warning:
 
